@@ -1,0 +1,15 @@
+.card_container {
+  border: solid 1px #ddd;
+  padding: 10px;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 0;
+  color: green;
+}
+
+.card_container img {
+  aspect-ratio: 16/9;
+}

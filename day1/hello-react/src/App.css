@@ -1,0 +1,11 @@
+.app-container {
+  column-gap: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 6px;
+  font-size: 1.3rem;
+}
