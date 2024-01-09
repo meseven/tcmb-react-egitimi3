@@ -1,7 +1,8 @@
 // import { useState } from "react";
 import "./App.css";
-import Posts from "./components/Posts";
-import Users from "./components/Users";
+import User from "./components/User";
+// import Posts from "./components/Posts";
+// import Users from "./components/Users";
 // import Counter from "./components/Counter";
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
 
   return (
     <>
-      <Users />
-      <Posts />
+      <User />
+      {/* <Users />
+      <Posts /> */}
       {/* {isVisible && <Counter />}
 
       <br />

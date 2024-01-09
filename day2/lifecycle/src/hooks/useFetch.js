@@ -9,11 +9,13 @@ const useFetch = (path) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    setLoading(true);
+
     axios(`${BASE_ENDPOINT}${path}`)
       .then(({ data }) => setData(data))
       .catch((e) => setError(e.message))
       .finally(() => setLoading(false));
-  }, []);
+  }, [path]);
 
   return {
     data,
