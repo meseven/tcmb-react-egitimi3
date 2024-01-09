@@ -1,4 +1,4 @@
-# Ödev 3
+# Ödev 2
 
 Sizden genel olarak bir hava durumu uygulaması geliştirmenizi bekliyorum. Türkiye'nin tüm illerinin bir haftalık hava raporunu görüntüleyebilmeliyiz.
 
