@@ -1,0 +1,62 @@
+#root {
+  height: 100vh;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  column-gap: 16px;
+  margin-bottom: 32px;
+  border-bottom: solid 1px #555;
+}
+.menu li {
+}
+.menu li a {
+  color: white;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+  color: #999;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 12px;
+  display: block;
+  border-top: solid 1px #555;
+}
+
+.auth-container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.auth-container > div {
+  padding: 10px;
+  border: solid 1px #444;
+  min-width: 300px;
+}
+
+.auth-container > div form input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-container > div form label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.auth-container .auth-menu {
+  border-bottom: solid 1px #444;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+  display: flex;
+  column-gap: 12px;
+}
