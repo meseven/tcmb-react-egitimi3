@@ -40,7 +40,7 @@ footer {
 .auth-container > div {
   padding: 10px;
   border: solid 1px #444;
-  min-width: 300px;
+  width: 600px;
 }
 
 .auth-container > div form input {
@@ -59,4 +59,15 @@ footer {
   margin-bottom: 12px;
   display: flex;
   column-gap: 12px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
 }
