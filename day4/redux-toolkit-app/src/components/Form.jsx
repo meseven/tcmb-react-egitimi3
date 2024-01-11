@@ -10,6 +10,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(addUser({ id: nanoid(), username }));
+    setUsername("");
   };
 
   return (
