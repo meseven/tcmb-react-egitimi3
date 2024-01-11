@@ -33,17 +33,28 @@ const Users = () => {
 
   return (
     <div>
-      <h2>Users ({total})</h2>
+      <h2>
+        <span data-cy="title">Users</span> (
+        <span data-cy="total-user">{total}</span>)
+      </h2>
 
       <Form />
 
       <button onClick={() => dispatch(removeAll())}>Remove All</button>
       <br />
 
-      <div className="user-list">
+      {total === 0 && (
+        <div className="empty-list" data-cy="empty-list">
+          User list is empty.
+        </div>
+      )}
+
+      <div className="user-list" data-cy="user-list">
         {list.map((user) => (
           <div key={user.id}>
             {user.username}
+
+            {/* <button id="delete_button">delete</button> */}
 
             <div
               className="delete-btn"

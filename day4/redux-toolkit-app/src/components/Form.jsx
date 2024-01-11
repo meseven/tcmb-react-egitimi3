@@ -14,8 +14,9 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: 10 }}>
+    <form onSubmit={handleSubmit} style={{ marginBottom: 10 }} data-cy="form">
       <input
+        data-cy="username-input"
         type="text"
         placeholder="Please enter a username"
         value={username}
