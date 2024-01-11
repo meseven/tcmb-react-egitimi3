@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addUser } from "../store/slices/usersSlice";
+import { nanoid } from "@reduxjs/toolkit";
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -8,7 +9,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addUser({ username }));
+    dispatch(addUser({ id: nanoid(), username }));
   };
 
   return (

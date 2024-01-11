@@ -1,21 +1,18 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { nanoid } from "@reduxjs/toolkit";
+import { createSlice, createEntityAdapter } from "@reduxjs/toolkit";
 
-const initialState = {
-  list: [{ id: nanoid(), username: "Erkan" }],
-};
+const usersAdapter = createEntityAdapter({
+  selectId: (user) => user.id,
+});
 
 export const usersSlice = createSlice({
   name: "users",
-  initialState,
+  initialState: usersAdapter.getInitialState(),
   reducers: {
-    addUser: (state, action) => {
-      state.list.push({ id: nanoid(), ...action.payload });
-    },
+    addUser: usersAdapter.addOne,
   },
 });
 
 export const { addUser } = usersSlice.actions;
-export const selectList = (state) => state.users.list;
+export const { selectAll } = usersAdapter.getSelectors((state) => state.users);
 
 export default usersSlice.reducer;

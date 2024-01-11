@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import Form from "./Form";
-import { selectList } from "../store/slices/usersSlice";
+import { selectAll } from "../store/slices/usersSlice";
 
 const Users = () => {
-  const list = useSelector(selectList);
+  const list = useSelector(selectAll);
 
   return (
     <div>
