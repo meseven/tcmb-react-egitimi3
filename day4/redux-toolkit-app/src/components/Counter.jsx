@@ -1,16 +1,23 @@
 import { useSelector, useDispatch } from "react-redux";
-import { increment } from "../store/slices/counterSlice";
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+  selectCount,
+} from "../store/slices/counterSlice";
 
 const Counter = () => {
-  const count = useSelector((state) => state.counter.value);
+  const count = useSelector(selectCount);
   const dispatch = useDispatch();
 
   return (
     <div className="card">
       <h2>{count}</h2>
       <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => {}}>Decrement</button>
-      <button onClick={() => {}}>Increment by amount</button>
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
+      <button onClick={() => dispatch(incrementByAmount(3))}>
+        Increment by amount
+      </button>
     </div>
   );
 };
